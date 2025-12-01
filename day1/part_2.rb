@@ -78,7 +78,6 @@ def crack_password
   streamer = InputStreamer.new(FILE_PATH)
   streamer.for_each do |line|
     lock.move(line)
-    puts "#{line.match(/([LR])\d+/).captures[0] == 'L' ? '←' : '→'}#{line.match(/([LR](\d+))/).captures[1].to_i} : #{lock.current_position} : #{lock.crossed_zero_count}"
   end
 
   password = lock.crossed_zero_count
