@@ -22,7 +22,7 @@ end
 
 # we have 100 numbers 0 to 99
 class Lock
-  LOCK_STATES = 0..99.freeze
+  LOCK_SIZE = 100.freeze
   attr_reader :current_position
 
   def initialize
@@ -44,18 +44,18 @@ class Lock
 
   private
   def move_left(position)
-    @current_position = (current_position - position) % LOCK_STATES.size
+    @current_position = (current_position - position) % LOCK_SIZE
   end
 
   def move_right(position)
-    @current_position = (current_position + position) % LOCK_STATES.size
+    @current_position = (current_position + position) % LOCK_SIZE
   end
 end
 
 
 FILE_PATH = 'input.txt'
 def crack_password
-  lock = Lock.new
+  lock = Lock.new(50) # start at middle position 50
   password = 0
 
   streamer = InputStreamer.new(FILE_PATH)
