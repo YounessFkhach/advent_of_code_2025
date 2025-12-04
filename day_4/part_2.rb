@@ -1,5 +1,7 @@
 # I went for the early backtracking
-# as soon as I find a roll in [x, y], I set next step to be [x-1, y-1] to only recalculate the effected  cells
+# as soon as I find a roll that can be removed in [x, y]:
+#   - I remove it
+#   - I set next step to be [x-1, y-1] to only recalculate the effected  cells
 # but maybe this makes it more heavy, I have to try other approaches to compare performance
 
 class InputStreamer
