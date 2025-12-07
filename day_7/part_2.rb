@@ -49,6 +49,7 @@ class Circut
   def split(index)
     # Apply the split tranformation
     # Instead of setting it to 1, we set the value to the sum of previous values
+    # This means each cell holds the sum of beams/possible paths
     @board[index - 1] = @board[index - 1] + @board[index]
     @board[index + 1] = @board[index + 1] + @board[index]
     @board[index]     = 0
