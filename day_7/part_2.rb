@@ -84,7 +84,6 @@ def solve(file_path = FILE_PATH)
     if circut == nil
       # we haven't initialized the the circut board yet
       circut = Circut.new(line)
-      beams = 1
     else
       sum = circut.advance(line)
     end
