@@ -71,7 +71,7 @@ class Circut
 end
 
 
-FILE_PATH = 'test.txt'.freeze
+FILE_PATH = 'input.txt'.freeze
 def solve(file_path = FILE_PATH)
   ## READING THE INPUT
   circut = nil
